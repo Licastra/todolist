@@ -1,0 +1,42 @@
+{
+  "brand": "LuceFox",
+  "updated_msk": "27.11 19:10",
+  "repo": "Licastra/todolist",
+  "pages_url": "https://licastra.github.io/todolist/",
+  "profiles": [
+    {
+      "id": "wl",
+      "title": "🦊LuceFox ⚪ Mobile",
+      "subtitle": "Мобильная сеть (White List)",
+      "accent": "cyan",
+      "update_interval_hours": 1,
+      "count": 183,
+      "updated_msk": "27.11 19:10",
+      "ready": true,
+      "raw_url": "https://raw.githubusercontent.com/Licastra/todolist/main/feed_w.txt#LuceFox-WL",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/Licastra/todolist@main/feed_w.txt#LuceFox-WL",
+      "deeplinks": {
+        "hiddify": "hiddify://import/https://raw.githubusercontent.com/Licastra/todolist/main/feed_w.txt#LuceFox-WL",
+        "happ": "happ://add/https%3A%2F%2Fraw.githubusercontent.com%2FLicastra%2Ftodolist%2Fmain%2Ffeed_w.txt%23LuceFox-WL",
+        "v2rayng": "v2rayng://install-sub?url=https%3A%2F%2Fraw.githubusercontent.com%2FLicastra%2Ftodolist%2Fmain%2Ffeed_w.txt%23LuceFox-WL&name=LuceFox-WL"
+      }
+    },
+    {
+      "id": "bl",
+      "title": "🦊LuceFox ⚫ Wi-Fi",
+      "subtitle": "Wi-Fi и провод (Black List)",
+      "accent": "amber",
+      "update_interval_hours": 2,
+      "count": 146,
+      "updated_msk": "27.11 19:10",
+      "ready": true,
+      "raw_url": "https://raw.githubusercontent.com/Licastra/todolist/main/feed_b.txt#LuceFox-BL",
+      "cdn_url": "https://cdn.jsdelivr.net/gh/Licastra/todolist@main/feed_b.txt#LuceFox-BL",
+      "deeplinks": {
+        "hiddify": "hiddify://import/https://raw.githubusercontent.com/Licastra/todolist/main/feed_b.txt#LuceFox-BL",
+        "happ": "happ://add/https%3A%2F%2Fraw.githubusercontent.com%2FLicastra%2Ftodolist%2Fmain%2Ffeed_b.txt%23LuceFox-BL",
+        "v2rayng": "v2rayng://install-sub?url=https%3A%2F%2Fraw.githubusercontent.com%2FLicastra%2Ftodolist%2Fmain%2Ffeed_b.txt%23LuceFox-BL&name=LuceFox-BL"
+      }
+    }
+  ]
+}
