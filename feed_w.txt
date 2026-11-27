@@ -1,6 +1,6 @@
-#profile-title: base64:RW1iZXJGb3ggwrcgTW9iaWxl
+#profile-title: base64:THVjZUZveCDCtyBNb2JpbGU=
 #profile-update-interval: 1
-#announce: base64:0J7QsdC90L7QstC70LXQvdC+IDI3LjExIDE2OjIyINCc0KHQmiDCtyAxNjUg0YPQt9C70L7Qsg==
+#announce: base64:0J7QsdC90L7QstC70LXQvdC+IDI3LjExIDE2OjM3INCc0KHQmiDCtyAxNjUg0YPQt9C70L7Qsg==
 vless://73ebb72a-e2a8-44c8-a0e3-938740a4f578@e54b10x.ee5.h1clayd.shop:443?type=xhttp&headerType=none&security=reality&encryption=none&sni=e54b10x.ee5.h1clayd.shop&pbk=v1FVRnLI528QxPA-jy2AEzpyFVQq7e4CbUzxSRNHRXg&sid=25e886ad1ab98159&spx=%2F&path=%2Fea1ae61a3ced&mode=auto&fp=ios#%F0%9F%87%AA%F0%9F%87%AA%20W-01%20%C2%B7%20XHTTP
 vless://73ebb72a-e2a8-44c8-a0e3-938740a4f578@e54b10x.ee5.h1clayd.shop:443?type=xhttp&headerType=none&security=reality&encryption=none&sni=e54b10x.ee5.h1clayd.shop&pbk=v1FVRnLI528QxPA-jy2AEzpyFVQq7e4CbUzxSRNHRXg&sid=25e886ad1ab98159&spx=%2F&path=%2Fea1ae61a3ced&mode=auto&fp=safari#%F0%9F%87%AA%F0%9F%87%AA%20W-02%20%C2%B7%20XHTTP
 vless://73ebb72a-e2a8-44c8-a0e3-938740a4f578@e54b10x.ee5.h1clayd.shop:443?type=xhttp&headerType=none&security=reality&encryption=none&sni=e54b10x.ee5.h1clayd.shop&pbk=v1FVRnLI528QxPA-jy2AEzpyFVQq7e4CbUzxSRNHRXg&sid=25e886ad1ab98159&spx=%2F&path=%2Fea1ae61a3ced&mode=auto&fp=android#%F0%9F%87%AA%F0%9F%87%AA%20W-03%20%C2%B7%20XHTTP
