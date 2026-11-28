@@ -1,6 +1,6 @@
 {
   "brand": "LuceFox",
-  "updated_msk": "28.11 06:20",
+  "updated_msk": "28.11 07:20",
   "repo": "Licastra/todolist",
   "pages_url": "https://licastra.github.io/todolist/",
   "profiles": [
@@ -10,8 +10,8 @@
       "subtitle": "Мобильная сеть (White List)",
       "accent": "cyan",
       "update_interval_hours": 1,
-      "count": 158,
-      "updated_msk": "28.11 06:20",
+      "count": 140,
+      "updated_msk": "28.11 07:20",
       "ready": true,
       "raw_url": "https://raw.githubusercontent.com/Licastra/todolist/main/feed_w.txt#LuceFox-WL",
       "cdn_url": "https://cdn.jsdelivr.net/gh/Licastra/todolist@main/feed_w.txt#LuceFox-WL",
