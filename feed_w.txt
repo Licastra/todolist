@@ -1,6 +1,6 @@
 #profile-title: base64:8J+mikx1Y2VGb3gg4pqqIE1vYmlsZQ==
 #profile-update-interval: 1
-#announce: base64:0J7QsdC90L7QstC70LXQvdC+IDI4LjExIDEzOjIxINCc0KHQmiDCtyAyMTUg0YPQt9C70L7Qsg==
+#announce: base64:0J7QsdC90L7QstC70LXQvdC+IDI4LjExIDEzOjM3INCc0KHQmiDCtyAyMTUg0YPQt9C70L7Qsg==
 vless://fb721937-6284-0019-9cbd-c3ba2cb66b4a@45.146.166.64:2083?security=tls&sni=cdn.mornismp.ru&alpn=h2&type=xhttp&path=%2Ftransport%2Fxhttp&mode=auto&fp=android#%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%A6%8ALuceFox%20%C2%B7%20W-01%20%C2%B7%20XHTTP
 vless://fb721937-6284-0019-9cbd-c3ba2cb66b4a@45.146.166.64:2083?security=tls&sni=cdn.mornismp.ru&alpn=h2&type=xhttp&path=%2Ftransport%2Fxhttp&mode=auto&fp=chrome#%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%A6%8ALuceFox%20%C2%B7%20W-02%20%C2%B7%20XHTTP
 vless://fb721937-6284-0019-9cbd-c3ba2cb66b4a@45.146.166.64:2083?security=tls&sni=cdn.mornismp.ru&alpn=h2&type=xhttp&path=%2Ftransport%2Fxhttp&mode=auto&fp=edge#%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%A6%8ALuceFox%20%C2%B7%20W-03%20%C2%B7%20XHTTP
