@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <!-- CUSTOM_DESIGN -->
-<html lang="ru">
+<html lang="ru" data-access="locked">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LuceFox — Профили подключения</title>
-  <meta name="description" content="Профили подключения LuceFox: готовые настройки Hiddify, автоматический выбор узла и регулярная синхронизация." />
+  <meta name="description" content="Профили подключения LuceFox: готовые настройки Hiddify" />
   <meta property="og:title" content="LuceFox — Профили подключения" />
-  <meta property="og:description" content="Профили подключения LuceFox: готовые настройки Hiddify, автоматический выбор узла и регулярная синхронизация." />
+  <meta property="og:description" content="Профили подключения LuceFox: готовые настройки Hiddify" />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#210340" />
+  <meta name="theme-color" content="#050114" />
   <link rel="icon" href="assets/icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,23 +17,23 @@
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js" defer></script>
   <style>
     :root {
-      /* Authentic Firefox Flare 2026 structure + LuceFox cosmic palette */
-      --fx-purple-deep: #210340;
-      --fx-purple-mid: #320A5E;
+      /* Unified obsidian canvas based on the hero */
+      --fx-purple-deep: #050114;
+      --fx-purple-mid: #0E0A22;
       --fx-purple-pencil: #592ACB;
       --fx-purple-btn: #7542E5;
       --fx-purple-btn-hover: #8A5CF6;
       --fx-gold-top: #FFD84D;
       --fx-gold-bottom: #FF9F1C;
-      --fx-ink-dark: #210340;
-      --fx-ink-body: #3E3357;
-      --fx-ink-muted: #675C80;
+      --fx-ink-dark: #111322;
+      --fx-ink-body: #3E435A;
+      --fx-ink-muted: #666C84;
       --fx-surface-white: #FFFFFF;
-      --fx-surface-tint: #F4EFFB;
-      --fx-surface-tint-border: #E2D7F5;
+      --fx-surface-tint: #F4F6FA;
+      --fx-surface-tint-border: #E2E7F0;
 
-      /* LuceFox brand accents */
-      --lf-midnight: #010110;
+      /* LuceFox subtle accents */
+      --lf-midnight: #050114;
       --lf-magenta: #C026D3;
       --lf-indigo: #4F46E5;
       --lf-cyan: #06B6D4;
@@ -68,7 +68,7 @@
       font-family: var(--font-sans);
       font-size: 16px;
       line-height: 1.5;
-      color: #F6F2FF;
+      color: #F4F5FA;
       background-color: var(--fx-purple-deep);
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
@@ -81,11 +81,12 @@
       padding: 0 28px;
     }
 
-    /* Firefox Flare Top Pencil Status Bar */
+    /* Bottom Optimization Status Bar — same unified page shade */
     .pencil-bar {
-      background: linear-gradient(90deg, #4B1DB8 0%, #632FD6 50%, #7B2CBF 100%);
-      color: #FFFFFF;
-      font-size: 13.5px;
+      background-color: var(--fx-purple-deep);
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 13px;
       font-weight: 600;
     }
 
@@ -93,9 +94,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      min-height: 38px;
-      padding: 6px 16px;
+      gap: 9px;
+      min-height: 40px;
+      padding: 8px 16px;
       text-align: center;
       flex-wrap: wrap;
     }
@@ -121,7 +122,7 @@
       font-size: 12.5px;
       font-weight: 600;
       font-variant-numeric: tabular-nums;
-      color: #FFFFFF;
+      color: rgba(255, 255, 255, 0.9);
     }
 
     .pencil-sep {
@@ -129,19 +130,21 @@
     }
 
     .pencil-note {
-      color: rgba(255, 255, 255, 0.86);
+      color: rgba(255, 255, 255, 0.78);
       font-weight: 500;
     }
 
-    /* Firefox Flare Sticky Dark-Purple Header */
+    /* Sticky Frosted-Glass Header in the exact same base shade */
     .fl-header {
       position: sticky;
       top: 0;
       z-index: 40;
-      background-color: rgba(33, 3, 64, 0.94);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.055) 0%, rgba(5, 1, 20, 0.56) 100%);
+      background-color: rgba(5, 1, 20, 0.62);
+      backdrop-filter: blur(26px) saturate(165%);
+      -webkit-backdrop-filter: blur(26px) saturate(165%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+      box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.04), 0 10px 30px rgba(0, 0, 0, 0.36);
     }
 
     .fl-header-inner {
@@ -171,7 +174,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 2px 12px rgba(192, 38, 211, 0.35);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
     }
 
     .fl-brand-icon img,
@@ -232,39 +235,39 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 7px;
+      width: 40px;
       height: 40px;
-      padding: 0 14px;
+      padding: 0;
       border-radius: var(--radius-pill);
-      border: 1px solid rgba(196, 181, 253, 0.28);
-      background-color: rgba(255, 255, 255, 0.08);
-      color: #F6F2FF;
-      font-family: var(--font-sans);
-      font-size: 13.5px;
-      font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.06) 100%);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.42), inset 0 -1px 0 rgba(255, 255, 255, 0.06), 0 6px 18px rgba(6, 2, 20, 0.24);
+      color: #FFFFFF;
       cursor: pointer;
-      white-space: nowrap;
       flex-shrink: 0;
-      transition: background-color 160ms var(--ease), border-color 160ms var(--ease), color 160ms var(--ease), transform 150ms var(--ease);
+      transition: background 180ms var(--ease), border-color 180ms var(--ease), box-shadow 180ms var(--ease), transform 150ms var(--ease);
     }
 
     .fl-theme-toggle:hover {
-      background-color: rgba(255, 255, 255, 0.16);
-      border-color: rgba(196, 181, 253, 0.5);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.11) 100%);
+      border-color: rgba(255, 255, 255, 0.4);
+      transform: translateY(-1px);
     }
 
     .fl-theme-toggle:active {
-      transform: translateY(1px);
+      transform: translateY(0) scale(0.97);
     }
 
     .fl-theme-toggle:focus-visible {
-      outline: 3px solid #C4B5FD;
+      outline: 3px solid rgba(255, 255, 255, 0.55);
       outline-offset: 2px;
     }
 
     .fl-theme-toggle svg {
-      width: 17px;
-      height: 17px;
+      width: 18px;
+      height: 18px;
       flex-shrink: 0;
     }
 
@@ -286,28 +289,34 @@
       justify-content: center;
       gap: 8px;
       min-height: 40px;
-      padding: 9px 22px;
+      padding: 9px 20px;
       border-radius: var(--radius-pill);
-      background-color: var(--fx-purple-btn);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.09) 100%);
+      backdrop-filter: blur(22px) saturate(180%);
+      -webkit-backdrop-filter: blur(22px) saturate(180%);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.48), inset 0 -1px 0 rgba(255, 255, 255, 0.08), 0 8px 22px rgba(6, 2, 20, 0.28);
       color: #FFFFFF;
       text-decoration: none;
       font-size: 14.5px;
       font-weight: 700;
       white-space: nowrap;
       flex-shrink: 0;
-      transition: background-color 160ms var(--ease), transform 150ms var(--ease);
+      transition: background 180ms var(--ease), border-color 180ms var(--ease), box-shadow 180ms var(--ease), transform 150ms var(--ease);
     }
 
     .fl-nav-cta:hover {
-      background-color: var(--fx-purple-btn-hover);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.14) 100%);
+      border-color: rgba(255, 255, 255, 0.46);
+      transform: translateY(-1px);
     }
 
     .fl-nav-cta:active {
-      transform: translateY(1px);
+      transform: translateY(0) scale(0.98);
     }
 
     /* =========================================================================
-       UPPER DARK-PURPLE FIREFOX FLARE REGION (Hero + Hiddify Settings Cards)
+       UNIFIED UPPER REGION (Hero + Hiddify Settings on #050114)
        ========================================================================= */
     .fl-split-upper {
       background-color: var(--fx-purple-deep);
@@ -317,7 +326,7 @@
       overflow: hidden;
     }
 
-    /* Hero section with full-bleed glowing fox background behind text */
+    /* Hero section blending seamlessly into the unified #050114 page canvas */
     .fl-hero {
       position: relative;
       min-height: 580px;
@@ -327,12 +336,10 @@
       justify-content: center;
       text-align: center;
       background:
-        radial-gradient(76% 62% at 50% 94%, rgba(192, 38, 211, 0.36) 0%, rgba(117, 66, 229, 0.28) 38%, rgba(33, 3, 64, 0) 76%),
-        radial-gradient(46% 52% at 14% 72%, rgba(6, 182, 212, 0.24) 0%, transparent 72%),
-        radial-gradient(46% 52% at 86% 74%, rgba(255, 159, 28, 0.18) 0%, transparent 72%),
-        #050114;
-      border-bottom-left-radius: var(--radius-stage);
-      border-bottom-right-radius: var(--radius-stage);
+        radial-gradient(54% 52% at 50% 52%, rgba(110, 72, 196, 0.14) 0%, rgba(5, 1, 20, 0) 72%),
+        var(--fx-purple-deep);
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
       overflow: hidden;
     }
 
@@ -343,8 +350,8 @@
       z-index: 1;
       pointer-events: none;
       background:
-        radial-gradient(ellipse 56% 58% at 50% 48%, rgba(5, 1, 20, 0.56) 0%, rgba(5, 1, 20, 0.28) 54%, rgba(5, 1, 20, 0.06) 84%),
-        linear-gradient(180deg, rgba(33, 3, 64, 0.22) 0%, rgba(5, 1, 20, 0) 24%, rgba(33, 3, 64, 0.45) 86%, rgba(33, 3, 64, 0.92) 100%);
+        radial-gradient(ellipse 56% 58% at 50% 48%, rgba(5, 1, 20, 0.5) 0%, rgba(5, 1, 20, 0.22) 54%, rgba(5, 1, 20, 0) 84%),
+        linear-gradient(180deg, rgba(5, 1, 20, 0.14) 0%, rgba(5, 1, 20, 0) 24%, rgba(5, 1, 20, 0.45) 84%, var(--fx-purple-deep) 100%);
     }
 
     .fl-hero-bg {
@@ -415,16 +422,18 @@
       margin-bottom: 0;
     }
 
-    /* Signature Firefox Flare Buttons */
+    /* Unified iOS 26 Liquid Glass Buttons */
     .fl-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 9px;
       min-height: 48px;
-      padding: 12px 28px;
+      padding: 12px 26px;
       border-radius: var(--radius-pill);
-      border: 2px solid transparent;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      backdrop-filter: blur(22px) saturate(180%);
+      -webkit-backdrop-filter: blur(22px) saturate(180%);
       font-family: var(--font-sans);
       font-size: 15.5px;
       font-weight: 700;
@@ -433,16 +442,16 @@
       text-decoration: none;
       white-space: normal;
       cursor: pointer;
-      transition: transform 150ms var(--ease), background-color 160ms var(--ease), border-color 160ms var(--ease), box-shadow 160ms var(--ease), color 160ms var(--ease), filter 160ms var(--ease);
+      transition: transform 150ms var(--ease), background 180ms var(--ease), border-color 180ms var(--ease), box-shadow 180ms var(--ease), color 180ms var(--ease);
     }
 
     .fl-btn:focus-visible {
-      outline: 3px solid #C4B5FD;
+      outline: 3px solid rgba(255, 255, 255, 0.55);
       outline-offset: 2px;
     }
 
     .fl-btn:active {
-      transform: translateY(1px);
+      transform: translateY(0) scale(0.985);
     }
 
     .fl-btn svg {
@@ -451,68 +460,42 @@
       flex-shrink: 0;
     }
 
-    .fl-btn-gold {
-      background: linear-gradient(180deg, var(--fx-gold-top) 0%, var(--fx-gold-bottom) 100%);
-      color: var(--fx-ink-dark);
-      box-shadow: 0 10px 28px rgba(255, 159, 28, 0.32);
-    }
-
-    .fl-btn-gold:hover {
-      filter: brightness(1.06);
-      box-shadow: 0 14px 34px rgba(255, 159, 28, 0.42);
-    }
-
-    .fl-btn-purple {
-      background-color: var(--fx-purple-btn);
-      color: #FFFFFF;
-      box-shadow: 0 8px 24px rgba(117, 66, 229, 0.34);
-    }
-
-    .fl-btn-purple:hover {
-      background-color: var(--fx-purple-btn-hover);
-    }
-
-    .fl-btn-outline-dark {
-      background-color: rgba(255, 255, 255, 0.07);
-      border-color: rgba(216, 198, 255, 0.36);
-      color: #F5F0FF;
-    }
-
-    .fl-btn-outline-dark:hover {
-      background-color: rgba(255, 255, 255, 0.16);
-      border-color: rgba(216, 198, 255, 0.65);
-      color: #FFFFFF;
-    }
-
-    .fl-btn-cyan {
-      background: linear-gradient(135deg, #22D3EE 0%, #06B6D4 100%);
-      color: #05131E;
-      box-shadow: 0 8px 24px rgba(6, 182, 212, 0.28);
-    }
-
-    .fl-btn-cyan:hover {
-      filter: brightness(1.08);
-    }
-
+    /* Primary Liquid Glass (all primary actions unified without color overload) */
+    .fl-btn-gold,
+    .fl-btn-purple,
+    .fl-btn-cyan,
     .fl-btn-amber {
-      background: linear-gradient(135deg, #FFB838 0%, #FF9F1C 100%);
-      color: #1B0D02;
-      box-shadow: 0 8px 24px rgba(255, 159, 28, 0.28);
-    }
-
-    .fl-btn-amber:hover {
-      filter: brightness(1.07);
-    }
-
-    .fl-btn-outline-light {
-      background-color: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 255, 255, 0.28);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.1) 100%);
+      border-color: rgba(255, 255, 255, 0.32);
       color: #FFFFFF;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), inset 0 -1px 0 rgba(255, 255, 255, 0.08), 0 10px 26px rgba(6, 2, 20, 0.32);
     }
 
+    .fl-btn-gold:hover,
+    .fl-btn-purple:hover,
+    .fl-btn-cyan:hover,
+    .fl-btn-amber:hover {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.15) 100%);
+      border-color: rgba(255, 255, 255, 0.5);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65), inset 0 -1px 0 rgba(255, 255, 255, 0.12), 0 12px 30px rgba(6, 2, 20, 0.38);
+      transform: translateY(-1px);
+    }
+
+    /* Secondary Liquid Glass */
+    .fl-btn-outline-dark,
+    .fl-btn-outline-light {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.04) 100%);
+      border-color: rgba(255, 255, 255, 0.2);
+      color: #F5F0FF;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28), inset 0 -1px 0 rgba(255, 255, 255, 0.05), 0 6px 16px rgba(6, 2, 20, 0.22);
+    }
+
+    .fl-btn-outline-dark:hover,
     .fl-btn-outline-light:hover {
-      background-color: rgba(255, 255, 255, 0.16);
-      border-color: rgba(255, 255, 255, 0.48);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.08) 100%);
+      border-color: rgba(255, 255, 255, 0.38);
+      color: #FFFFFF;
+      transform: translateY(-1px);
     }
 
     .fl-hero-link {
@@ -581,11 +564,11 @@
     }
 
     .fl-white-card {
-      background:
-        radial-gradient(65% 60% at 96% 0%, rgba(94, 234, 212, 0.12) 0%, transparent 70%),
-        linear-gradient(155deg, rgba(46, 21, 86, 0.94) 0%, rgba(25, 12, 54, 0.96) 100%);
-      color: #F6F2FF;
-      border: 1px solid rgba(196, 181, 253, 0.22);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.068) 0%, rgba(255, 255, 255, 0.024) 100%);
+      backdrop-filter: blur(24px) saturate(145%);
+      -webkit-backdrop-filter: blur(24px) saturate(145%);
+      color: #F4F5FA;
+      border: 1px solid rgba(255, 255, 255, 0.11);
       border-radius: var(--radius-card);
       padding: 34px 32px;
       display: flex;
@@ -593,7 +576,7 @@
       gap: 20px;
       min-width: 0;
       max-width: 100%;
-      box-shadow: 0 22px 48px rgba(7, 2, 20, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 20px 48px rgba(0, 0, 0, 0.42);
     }
 
     .fl-card-kicker {
@@ -601,7 +584,7 @@
       font-weight: 800;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #5EEAD4;
+      color: rgba(255, 255, 255, 0.52);
       margin-bottom: 6px;
     }
 
@@ -633,7 +616,7 @@
     .fl-card-hint {
       font-size: 14px;
       line-height: 1.5;
-      color: rgba(226, 217, 243, 0.78);
+      color: rgba(255, 255, 255, 0.64);
     }
 
     .fl-json-toggle {
@@ -645,7 +628,7 @@
       font-family: var(--font-sans);
       font-size: 14.5px;
       font-weight: 700;
-      color: #67E8F9;
+      color: rgba(255, 255, 255, 0.82);
       text-decoration: underline;
       text-underline-offset: 4px;
       cursor: pointer;
@@ -657,19 +640,19 @@
     }
 
     .fl-json-toggle:focus-visible {
-      outline: 2px solid #67E8F9;
+      outline: 2px solid rgba(255, 255, 255, 0.6);
       outline-offset: 3px;
       border-radius: 4px;
     }
 
     .fl-json-drawer {
       border-radius: var(--radius-inner);
-      background-color: rgba(8, 6, 22, 0.88);
-      color: #E2DCF2;
+      background-color: rgba(5, 1, 20, 0.72);
+      color: rgba(244, 245, 250, 0.88);
       max-height: 280px;
       max-width: 100%;
       overflow: auto;
-      border: 1px solid rgba(196, 181, 253, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     .fl-json-drawer[hidden] {
@@ -686,15 +669,12 @@
     }
 
     /* =========================================================================
-       CONTINUOUS DEEP-PURPLE LOWER REGION (Профили подключения + Инструкция)
+       CONTINUOUS LOWER REGION (Exact Same #050114 Canvas)
        ========================================================================= */
     .fl-split-lower {
       position: relative;
-      background:
-        radial-gradient(56% 36% at 14% 52%, rgba(192, 38, 211, 0.11) 0%, transparent 72%),
-        radial-gradient(54% 36% at 86% 60%, rgba(79, 70, 229, 0.12) 0%, transparent 72%),
-        var(--fx-purple-deep);
-      color: #F6F2FF;
+      background-color: var(--fx-purple-deep);
+      color: #F4F5FA;
       padding: 20px 0 72px;
     }
 
@@ -707,7 +687,7 @@
     }
 
     .fl-h2-sub-dark {
-      color: rgba(255, 255, 255, 0.82);
+      color: rgba(255, 255, 255, 0.72);
     }
 
     .profiles-grid {
@@ -717,7 +697,7 @@
       align-items: stretch;
     }
 
-    /* Profile Card — Same Cosmic Purple Card Style as Upper Section */
+    /* Profile Card — Clean Neutral Frosted Glass on Unified #050114 Canvas */
     .profile-card {
       position: relative;
       border-radius: var(--radius-card);
@@ -732,34 +712,33 @@
     }
 
     .profile-card.is-ready {
-      background:
-        radial-gradient(68% 64% at 96% 4%, var(--card-glow, rgba(6, 182, 212, 0.22)) 0%, transparent 70%),
-        linear-gradient(155deg, rgba(46, 21, 86, 0.94) 0%, rgba(25, 12, 54, 0.96) 100%);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.068) 0%, rgba(255, 255, 255, 0.024) 100%);
+      backdrop-filter: blur(24px) saturate(145%);
+      -webkit-backdrop-filter: blur(24px) saturate(145%);
       color: #FFFFFF;
-      border: 1px solid rgba(196, 181, 253, 0.24);
-      box-shadow: 0 22px 48px rgba(7, 2, 20, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 20px 48px rgba(0, 0, 0, 0.42);
     }
 
     .profile-card.is-ready:hover {
       transform: translateY(-2px);
-      border-color: rgba(196, 181, 253, 0.42);
-      box-shadow: 0 26px 56px rgba(7, 2, 20, 0.54);
+      border-color: rgba(255, 255, 255, 0.22);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 24px 54px rgba(0, 0, 0, 0.52);
     }
 
-    .profile-card[data-accent="cyan"] {
-      --card-accent: #22D3EE;
-      --card-glow: rgba(6, 182, 212, 0.24);
-    }
-
+    .profile-card[data-accent="cyan"],
     .profile-card[data-accent="amber"] {
-      --card-accent: #FF9F1C;
-      --card-glow: rgba(255, 159, 28, 0.22);
+      --card-accent: #FFFFFF;
+      --card-glow: transparent;
     }
 
     .profile-card.is-pending {
-      background: linear-gradient(155deg, rgba(39, 17, 74, 0.68) 0%, rgba(24, 10, 50, 0.74) 100%);
-      color: #EAE2FA;
-      border: 1px solid rgba(196, 181, 253, 0.16);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.038) 0%, rgba(255, 255, 255, 0.014) 100%);
+      backdrop-filter: blur(20px) saturate(130%);
+      -webkit-backdrop-filter: blur(20px) saturate(130%);
+      color: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
     }
 
     .profile-head {
@@ -788,11 +767,11 @@
     }
 
     .profile-card.is-ready .profile-subtitle {
-      color: rgba(236, 228, 255, 0.84);
+      color: rgba(255, 255, 255, 0.72);
     }
 
     .profile-card.is-pending .profile-subtitle {
-      color: rgba(212, 201, 236, 0.76);
+      color: rgba(255, 255, 255, 0.58);
     }
 
     .profile-meta {
@@ -807,11 +786,11 @@
     }
 
     .profile-card.is-ready .profile-meta {
-      color: rgba(223, 200, 255, 0.8);
+      color: rgba(255, 255, 255, 0.56);
     }
 
     .profile-card.is-pending .profile-meta {
-      color: rgba(196, 181, 224, 0.68);
+      color: rgba(255, 255, 255, 0.45);
     }
 
     .meta-sep {
@@ -835,7 +814,7 @@
     }
 
     .profile-card.is-pending .metric-value {
-      color: rgba(196, 181, 224, 0.55);
+      color: rgba(255, 255, 255, 0.36);
     }
 
     .metric-label {
@@ -846,11 +825,11 @@
     }
 
     .profile-card.is-ready .metric-label {
-      color: rgba(236, 228, 255, 0.68);
+      color: rgba(255, 255, 255, 0.52);
     }
 
     .profile-card.is-pending .metric-label {
-      color: rgba(196, 181, 224, 0.55);
+      color: rgba(255, 255, 255, 0.36);
     }
 
     /* Profile Body (Ready) */
@@ -860,7 +839,7 @@
       gap: 18px 20px;
       align-items: start;
       padding-top: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      border-top: 1px solid rgba(255, 255, 255, 0.09);
     }
 
     .profile-controls {
@@ -875,18 +854,19 @@
       height: 44px;
       padding: 0 14px;
       border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      background-color: rgba(8, 2, 20, 0.56);
-      color: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background-color: rgba(255, 255, 255, 0.045);
+      color: rgba(255, 255, 255, 0.84);
       font-family: var(--font-mono);
       font-size: 12px;
       outline: none;
       text-overflow: ellipsis;
-      transition: border-color 150ms var(--ease);
+      transition: border-color 150ms var(--ease), background-color 150ms var(--ease);
     }
 
     .url-input:focus {
-      border-color: var(--card-accent, #22D3EE);
+      border-color: rgba(255, 255, 255, 0.36);
+      background-color: rgba(255, 255, 255, 0.07);
       color: #FFFFFF;
     }
 
@@ -924,17 +904,17 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.34);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.42);
       transition: transform 180ms var(--ease), box-shadow 180ms var(--ease);
     }
 
     .qr-trigger:hover {
       transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 16px 34px rgba(6, 182, 212, 0.28);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.56);
     }
 
     .qr-trigger:focus-visible {
-      outline: 3px solid var(--lf-cyan-bright);
+      outline: 3px solid rgba(255, 255, 255, 0.65);
       outline-offset: 3px;
     }
 
@@ -958,7 +938,7 @@
     .qr-hint {
       font-size: 12px;
       font-weight: 600;
-      color: rgba(255, 255, 255, 0.72);
+      color: rgba(255, 255, 255, 0.62);
       text-align: center;
     }
 
@@ -969,14 +949,14 @@
       flex-direction: column;
       gap: 9px;
       padding-top: 16px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .group-caption {
       font-size: 12.5px;
       font-weight: 700;
       letter-spacing: 0.04em;
-      color: rgba(223, 200, 255, 0.8);
+      color: rgba(255, 255, 255, 0.58);
     }
 
     .deeplink-row {
@@ -993,19 +973,23 @@
       min-height: 42px;
       padding: 9px 14px;
       border-radius: var(--radius-pill);
-      background-color: rgba(255, 255, 255, 0.1);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
       border: 1px solid rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(18px) saturate(160%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24), 0 4px 12px rgba(0, 0, 0, 0.24);
       color: #FFFFFF;
       text-decoration: none;
       font-size: 14px;
       font-weight: 700;
       white-space: nowrap;
-      transition: background-color 150ms var(--ease), border-color 150ms var(--ease);
+      transition: background 160ms var(--ease), border-color 160ms var(--ease), transform 150ms var(--ease);
     }
 
     .btn-app:hover {
-      background-color: rgba(255, 255, 255, 0.2);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.09) 100%);
       border-color: rgba(255, 255, 255, 0.36);
+      transform: translateY(-1px);
     }
 
     .btn-app svg {
@@ -1022,19 +1006,19 @@
       justify-content: flex-start;
       gap: 8px;
       padding-top: 22px;
-      border-top: 1px solid rgba(196, 181, 253, 0.14);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .pending-title {
       font-family: var(--font-display);
       font-size: 1.55rem;
       font-weight: 800;
-      color: #FBBF24;
+      color: rgba(255, 255, 255, 0.88);
     }
 
     .pending-note {
       font-size: 15px;
-      color: rgba(212, 201, 236, 0.76);
+      color: rgba(255, 255, 255, 0.56);
       max-width: 38ch;
     }
 
@@ -1047,15 +1031,18 @@
     }
 
     .guide-details {
-      background: linear-gradient(155deg, rgba(46, 21, 86, 0.9) 0%, rgba(25, 12, 54, 0.94) 100%);
-      border: 1px solid rgba(196, 181, 253, 0.22);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.055) 0%, rgba(255, 255, 255, 0.02) 100%);
+      backdrop-filter: blur(24px) saturate(145%);
+      -webkit-backdrop-filter: blur(24px) saturate(145%);
+      border: 1px solid rgba(255, 255, 255, 0.11);
       border-radius: 28px;
       overflow: hidden;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 14px 36px rgba(0, 0, 0, 0.32);
       transition: border-color 160ms var(--ease);
     }
 
     .guide-details:hover {
-      border-color: rgba(196, 181, 253, 0.42);
+      border-color: rgba(255, 255, 255, 0.22);
     }
 
     .guide-summary {
@@ -1078,14 +1065,14 @@
     }
 
     .guide-summary:focus-visible {
-      outline: 3px solid #C4B5FD;
+      outline: 3px solid rgba(255, 255, 255, 0.55);
       outline-offset: -3px;
     }
 
     .guide-chevron {
       width: 24px;
       height: 24px;
-      color: #C4B5FD;
+      color: rgba(255, 255, 255, 0.65);
       transition: transform 200ms var(--ease);
       flex-shrink: 0;
     }
@@ -1095,14 +1082,14 @@
     }
 
     .guide-body {
-      padding: 0 30px 28px;
-      border-top: 1px solid rgba(196, 181, 253, 0.14);
+      padding: 24px 30px 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .guide-clients {
       margin-top: 18px;
       font-size: 15px;
-      color: rgba(226, 217, 243, 0.84);
+      color: rgba(255, 255, 255, 0.72);
     }
 
     .guide-clients strong {
@@ -1113,37 +1100,74 @@
     .guide-steps {
       list-style: none;
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 18px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px 32px;
     }
 
     .guide-step {
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 8px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .guide-step:nth-child(1),
+    .guide-step:nth-child(2) {
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .step-head {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      flex-wrap: wrap;
     }
 
     .step-num {
       font-family: var(--font-mono);
       font-size: 13px;
       font-weight: 700;
-      color: #67E8F9;
+      color: rgba(255, 255, 255, 0.56);
+      font-variant-numeric: tabular-nums;
+      flex-shrink: 0;
+    }
+
+    .step-sep {
+      color: rgba(255, 255, 255, 0.34);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step-title {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.3;
+      color: #FFFFFF;
     }
 
     .step-text {
       font-size: 14.5px;
-      line-height: 1.5;
-      color: rgba(226, 217, 243, 0.86);
+      line-height: 1.55;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    @media (max-width: 960px) {
+      .guide-step:nth-child(2) {
+        padding-top: 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
     }
 
     /* =========================================================================
-       MINIMALIST CONTINUOUS FOOTER
+       MINIMALIST CONTINUOUS FOOTER (Exact Same #050114 Canvas)
        ========================================================================= */
     .fl-footer {
-      background-color: #16022C;
-      color: rgba(226, 217, 243, 0.72);
-      border-top: 1px solid rgba(196, 181, 253, 0.14);
+      background-color: var(--fx-purple-deep);
+      color: rgba(255, 255, 255, 0.62);
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
       padding: 26px 0;
       font-size: 14px;
     }
@@ -1165,7 +1189,7 @@
     }
 
     .fl-footer-link {
-      color: rgba(236, 228, 255, 0.86);
+      color: rgba(255, 255, 255, 0.76);
       text-decoration: none;
       font-weight: 600;
       transition: color 150ms var(--ease);
@@ -1184,9 +1208,9 @@
       position: fixed;
       inset: 0;
       z-index: 60;
-      background: rgba(16, 2, 34, 0.84);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+      background: rgba(5, 1, 20, 0.82);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1208,16 +1232,18 @@
     .qr-modal {
       width: 100%;
       max-width: 360px;
-      background: linear-gradient(155deg, #2D1259 0%, #190937 100%);
-      color: #F6F2FF;
-      border: 1px solid rgba(196, 181, 253, 0.28);
+      background: linear-gradient(180deg, rgba(28, 22, 48, 0.88) 0%, rgba(12, 8, 28, 0.92) 100%);
+      backdrop-filter: blur(28px) saturate(160%);
+      -webkit-backdrop-filter: blur(28px) saturate(160%);
+      color: #F4F5FA;
+      border: 1px solid rgba(255, 255, 255, 0.16);
       border-radius: 32px;
       padding: 28px;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 18px;
-      box-shadow: 0 28px 68px rgba(7, 2, 20, 0.65);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 28px 68px rgba(0, 0, 0, 0.65);
       transform: scale(0.95);
       transition: transform 200ms var(--ease);
     }
@@ -1265,14 +1291,16 @@
       bottom: 24px;
       z-index: 80;
       transform: translateX(-50%) translateY(16px);
-      background-color: #2B0F54;
-      border: 1px solid rgba(196, 181, 253, 0.35);
+      background: rgba(18, 14, 36, 0.84);
+      backdrop-filter: blur(24px) saturate(160%);
+      -webkit-backdrop-filter: blur(24px) saturate(160%);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       color: #FFFFFF;
       padding: 12px 22px;
       border-radius: var(--radius-pill);
       font-size: 14px;
       font-weight: 700;
-      box-shadow: 0 16px 38px rgba(7, 2, 20, 0.56);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 16px 38px rgba(0, 0, 0, 0.56);
       opacity: 0;
       pointer-events: none;
       transition: opacity 180ms var(--ease), transform 180ms var(--ease);
@@ -1451,31 +1479,39 @@
       }
 
       .guide-body {
-        padding: 0 20px 22px;
+        padding: 18px 20px 22px;
       }
     }
 
     /* =========================================================================
-       LIGHT THEME — "НОЧНОЕ СИЯНИЕ" (Soft Aurora Daylight, Easy on the Eyes)
+       LIGHT THEME — Unified Soft Mist Shade (#EEF2F8) + Frosted Glass
        ========================================================================= */
     html[data-theme="light"],
     html[data-theme="light"] body {
-      background-color: #E7EFFA;
-      color: #161036;
+      background-color: #EEF2F8;
+      color: #111322;
     }
 
     html[data-theme="light"] .pencil-bar {
-      background: linear-gradient(90deg, #4338CA 0%, #3B5BDB 48%, #0D9488 100%);
+      background-color: #EEF2F8;
+      border-top-color: rgba(17, 19, 34, 0.08);
+      color: #4A5068;
+    }
+
+    html[data-theme="light"] .pencil-time {
+      color: #111322;
     }
 
     html[data-theme="light"] .fl-header {
-      background-color: rgba(232, 240, 252, 0.88);
-      border-bottom-color: rgba(79, 70, 229, 0.14);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.72) 0%, rgba(238, 242, 248, 0.62) 100%);
+      background-color: rgba(238, 242, 248, 0.74);
+      border-bottom-color: rgba(17, 19, 34, 0.08);
+      box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.6), 0 8px 24px rgba(17, 19, 34, 0.05);
     }
 
     html[data-theme="light"] .fl-brand,
     html[data-theme="light"] .fl-brand-wordmark {
-      color: #161036;
+      color: #111322;
     }
 
     html[data-theme="light"] .fl-brand-wordmark span {
@@ -1486,182 +1522,214 @@
     }
 
     html[data-theme="light"] .fl-nav a {
-      color: #2B2054;
+      color: #363C54;
     }
 
     html[data-theme="light"] .fl-nav a:hover {
-      color: #4F46E5;
+      color: #111322;
     }
 
-    html[data-theme="light"] .fl-theme-toggle {
-      background-color: rgba(79, 70, 229, 0.09);
-      border-color: rgba(79, 70, 229, 0.24);
-      color: #24194E;
-    }
-
-    html[data-theme="light"] .fl-theme-toggle:hover {
-      background-color: rgba(79, 70, 229, 0.16);
-      border-color: rgba(79, 70, 229, 0.42);
-    }
-
+    html[data-theme="light"] .fl-theme-toggle,
     html[data-theme="light"] .fl-nav-cta {
-      background: linear-gradient(135deg, #5B21B6 0%, #4F46E5 60%, #0891B2 100%);
-      box-shadow: 0 6px 18px rgba(79, 70, 229, 0.24);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.48) 100%);
+      border-color: rgba(17, 19, 34, 0.12);
+      box-shadow: inset 0 1.5px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 0 rgba(17, 19, 34, 0.04), 0 6px 18px rgba(17, 19, 34, 0.06);
+      color: #111322;
+    }
+
+    html[data-theme="light"] .fl-theme-toggle:hover,
+    html[data-theme="light"] .fl-nav-cta:hover {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.68) 100%);
+      border-color: rgba(17, 19, 34, 0.22);
+      color: #111322;
     }
 
     html[data-theme="light"] .fl-split-upper {
-      background:
-        radial-gradient(64% 38% at 12% 76%, rgba(20, 184, 166, 0.18) 0%, transparent 72%),
-        radial-gradient(60% 38% at 88% 82%, rgba(139, 92, 246, 0.16) 0%, transparent 74%),
-        #E7EFFA;
-      color: #161036;
+      background: #EEF2F8;
+      color: #111322;
     }
 
     html[data-theme="light"] .fl-hero {
       background:
-        radial-gradient(72% 62% at 50% 94%, rgba(20, 184, 166, 0.34) 0%, rgba(79, 70, 229, 0.28) 40%, rgba(18, 17, 52, 0) 76%),
-        radial-gradient(48% 52% at 14% 72%, rgba(45, 212, 191, 0.28) 0%, transparent 72%),
-        radial-gradient(48% 52% at 86% 74%, rgba(168, 85, 247, 0.26) 0%, transparent 72%),
-        #111032;
-      box-shadow: 0 18px 46px rgba(22, 16, 54, 0.18);
+        radial-gradient(54% 52% at 50% 52%, rgba(110, 72, 196, 0.14) 0%, rgba(5, 1, 20, 0) 72%),
+        #050114;
+      border-bottom-left-radius: var(--radius-stage);
+      border-bottom-right-radius: var(--radius-stage);
+      box-shadow: 0 18px 46px rgba(17, 19, 34, 0.14);
     }
 
     html[data-theme="light"] .fl-hero::after {
       background:
-        radial-gradient(ellipse 56% 58% at 50% 48%, rgba(12, 12, 38, 0.52) 0%, rgba(12, 12, 38, 0.24) 56%, rgba(12, 12, 38, 0.04) 84%),
-        linear-gradient(180deg, rgba(18, 17, 52, 0.16) 0%, rgba(18, 17, 52, 0) 26%, rgba(18, 17, 52, 0.26) 100%);
+        radial-gradient(ellipse 56% 58% at 50% 48%, rgba(5, 1, 20, 0.5) 0%, rgba(5, 1, 20, 0.22) 56%, rgba(5, 1, 20, 0) 84%),
+        linear-gradient(180deg, rgba(5, 1, 20, 0.14) 0%, rgba(5, 1, 20, 0) 26%, rgba(5, 1, 20, 0.34) 100%);
     }
 
     html[data-theme="light"] .fl-h2,
     html[data-theme="light"] .fl-h2-dark {
-      color: #161036;
+      color: #111322;
     }
 
     html[data-theme="light"] .fl-h2-sub,
     html[data-theme="light"] .fl-h2-sub-dark {
-      color: #46436A;
+      color: #4D536B;
     }
 
     html[data-theme="light"] .fl-split-lower {
-      background:
-        radial-gradient(56% 36% at 14% 52%, rgba(20, 184, 166, 0.16) 0%, transparent 72%),
-        radial-gradient(54% 36% at 86% 60%, rgba(139, 92, 246, 0.15) 0%, transparent 72%),
-        #E7EFFA;
-      color: #161036;
+      background: #EEF2F8;
+      color: #111322;
     }
 
     html[data-theme="light"] .fl-white-card,
     html[data-theme="light"] .profile-card.is-ready {
-      background:
-        radial-gradient(66% 60% at 96% 0%, rgba(20, 184, 166, 0.15) 0%, transparent 70%),
-        radial-gradient(52% 48% at 4% 100%, rgba(139, 92, 246, 0.1) 0%, transparent 70%),
-        linear-gradient(155deg, rgba(248, 251, 255, 0.94) 0%, rgba(238, 244, 254, 0.96) 100%);
-      color: #161036;
-      border-color: rgba(99, 102, 241, 0.2);
-      box-shadow: 0 18px 42px rgba(22, 16, 54, 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0.44) 100%);
+      backdrop-filter: blur(22px) saturate(140%);
+      -webkit-backdrop-filter: blur(22px) saturate(140%);
+      color: #111322;
+      border-color: rgba(17, 19, 34, 0.1);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.92), 0 16px 38px rgba(17, 19, 34, 0.06);
     }
 
     html[data-theme="light"] .profile-card.is-ready:hover {
-      border-color: rgba(20, 184, 166, 0.44);
-      box-shadow: 0 22px 48px rgba(22, 16, 54, 0.13);
+      border-color: rgba(17, 19, 34, 0.2);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 20px 44px rgba(17, 19, 34, 0.09);
     }
 
     html[data-theme="light"] .fl-card-kicker {
-      color: #0F766E;
+      color: #5E657E;
     }
 
     html[data-theme="light"] .fl-card-title,
     html[data-theme="light"] .profile-title {
-      color: #161036;
+      color: #111322;
     }
 
     html[data-theme="light"] .fl-card-hint,
     html[data-theme="light"] .profile-card.is-ready .profile-subtitle,
     html[data-theme="light"] .qr-hint {
-      color: #48446C;
+      color: #4D536B;
     }
 
     html[data-theme="light"] .profile-card.is-ready .profile-meta {
-      color: #55507D;
+      color: #606780;
     }
 
     html[data-theme="light"] .profile-card.is-ready .metric-label {
-      color: #5B5780;
+      color: #606780;
     }
 
-    html[data-theme="light"] .profile-card[data-accent="cyan"] {
-      --card-accent: #0284C7;
-    }
-
+    html[data-theme="light"] .profile-card[data-accent="cyan"],
     html[data-theme="light"] .profile-card[data-accent="amber"] {
-      --card-accent: #D97706;
+      --card-accent: #111322;
+    }
+
+    html[data-theme="light"] .fl-btn-gold,
+    html[data-theme="light"] .fl-btn-purple,
+    html[data-theme="light"] .fl-btn-cyan,
+    html[data-theme="light"] .fl-btn-amber {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.56) 100%);
+      border-color: rgba(17, 19, 34, 0.14);
+      color: #111322;
+      box-shadow: inset 0 1.5px 0 rgba(255, 255, 255, 0.96), inset 0 -1px 0 rgba(17, 19, 34, 0.05), 0 8px 20px rgba(17, 19, 34, 0.07);
+    }
+
+    html[data-theme="light"] .fl-btn-gold:hover,
+    html[data-theme="light"] .fl-btn-purple:hover,
+    html[data-theme="light"] .fl-btn-cyan:hover,
+    html[data-theme="light"] .fl-btn-amber:hover {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.74) 100%);
+      border-color: rgba(17, 19, 34, 0.26);
+      box-shadow: inset 0 1.5px 0 rgba(255, 255, 255, 1), 0 10px 24px rgba(17, 19, 34, 0.1);
+    }
+
+    /* Keep hero Liquid Glass button bright white on dark-sky hero in light theme */
+    html[data-theme="light"] .fl-hero .fl-btn-gold {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.1) 100%);
+      border-color: rgba(255, 255, 255, 0.34);
+      color: #FFFFFF;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 10px 26px rgba(6, 2, 20, 0.32);
+    }
+
+    html[data-theme="light"] .fl-hero .fl-btn-gold:hover {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.16) 100%);
+      border-color: rgba(255, 255, 255, 0.52);
     }
 
     html[data-theme="light"] .fl-btn-outline-dark,
     html[data-theme="light"] .fl-btn-outline-light {
-      background-color: rgba(79, 70, 229, 0.07);
-      border-color: rgba(79, 70, 229, 0.3);
-      color: #1F174A;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.56) 0%, rgba(255, 255, 255, 0.28) 100%);
+      border-color: rgba(17, 19, 34, 0.12);
+      color: #20253A;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.88), 0 4px 12px rgba(17, 19, 34, 0.05);
     }
 
     html[data-theme="light"] .fl-btn-outline-dark:hover,
     html[data-theme="light"] .fl-btn-outline-light:hover {
-      background-color: rgba(79, 70, 229, 0.15);
-      border-color: rgba(79, 70, 229, 0.55);
-      color: #161036;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.52) 100%);
+      border-color: rgba(17, 19, 34, 0.24);
+      color: #111322;
     }
 
     html[data-theme="light"] .fl-json-toggle {
-      color: #4F46E5;
+      color: #2B314A;
     }
 
     html[data-theme="light"] .fl-json-toggle:hover {
-      color: #161036;
+      color: #111322;
+    }
+
+    html[data-theme="light"] .fl-json-drawer {
+      background-color: rgba(255, 255, 255, 0.72);
+      border-color: rgba(17, 19, 34, 0.12);
+      color: #1E243B;
     }
 
     html[data-theme="light"] .profile-body {
-      border-top-color: rgba(99, 102, 241, 0.15);
+      border-top-color: rgba(17, 19, 34, 0.08);
     }
 
     html[data-theme="light"] .url-input {
-      background-color: rgba(224, 233, 248, 0.85);
-      border-color: rgba(99, 102, 241, 0.22);
-      color: #1E1747;
+      background-color: rgba(255, 255, 255, 0.62);
+      border-color: rgba(17, 19, 34, 0.12);
+      color: #20253A;
     }
 
     html[data-theme="light"] .url-input:focus {
-      border-color: #0284C7;
-      color: #161036;
+      border-color: rgba(17, 19, 34, 0.34);
+      background-color: rgba(255, 255, 255, 0.88);
+      color: #111322;
     }
 
     html[data-theme="light"] .qr-trigger {
-      box-shadow: 0 10px 26px rgba(22, 16, 54, 0.12);
-      border: 1px solid rgba(99, 102, 241, 0.14);
+      box-shadow: 0 10px 26px rgba(17, 19, 34, 0.1);
+      border: 1px solid rgba(17, 19, 34, 0.08);
     }
 
     html[data-theme="light"] .deeplink-group {
-      border-top-color: rgba(99, 102, 241, 0.14);
+      border-top-color: rgba(17, 19, 34, 0.08);
     }
 
     html[data-theme="light"] .group-caption {
-      color: #4F46E5;
+      color: #5E657E;
     }
 
     html[data-theme="light"] .btn-app {
-      background-color: rgba(79, 70, 229, 0.08);
-      border-color: rgba(79, 70, 229, 0.2);
-      color: #1F174A;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.64) 0%, rgba(255, 255, 255, 0.34) 100%);
+      border-color: rgba(17, 19, 34, 0.12);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.88), 0 4px 12px rgba(17, 19, 34, 0.05);
+      color: #111322;
     }
 
     html[data-theme="light"] .btn-app:hover {
-      background-color: rgba(79, 70, 229, 0.16);
-      border-color: rgba(79, 70, 229, 0.42);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.6) 100%);
+      border-color: rgba(17, 19, 34, 0.24);
     }
 
     html[data-theme="light"] .profile-card.is-pending {
-      background: linear-gradient(155deg, rgba(235, 241, 252, 0.78) 0%, rgba(226, 234, 249, 0.84) 100%);
-      color: #241D4C;
-      border-color: rgba(99, 102, 241, 0.16);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 0.24) 100%);
+      backdrop-filter: blur(18px) saturate(130%);
+      -webkit-backdrop-filter: blur(18px) saturate(130%);
+      color: #20253A;
+      border-color: rgba(17, 19, 34, 0.08);
     }
 
     html[data-theme="light"] .profile-card.is-pending .profile-subtitle,
@@ -1669,85 +1737,369 @@
     html[data-theme="light"] .profile-card.is-pending .metric-value,
     html[data-theme="light"] .profile-card.is-pending .metric-label,
     html[data-theme="light"] .pending-note {
-      color: #5C5780;
+      color: #646B84;
     }
 
     html[data-theme="light"] .pending-state {
-      border-top-color: rgba(99, 102, 241, 0.15);
+      border-top-color: rgba(17, 19, 34, 0.08);
     }
 
     html[data-theme="light"] .pending-title {
-      color: #B45309;
+      color: #1F2438;
     }
 
     html[data-theme="light"] .guide-details {
-      background: linear-gradient(155deg, rgba(246, 250, 255, 0.9) 0%, rgba(236, 243, 253, 0.92) 100%);
-      border-color: rgba(20, 184, 166, 0.28);
-      box-shadow: 0 12px 30px rgba(22, 16, 54, 0.06);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.64) 0%, rgba(255, 255, 255, 0.38) 100%);
+      backdrop-filter: blur(22px) saturate(140%);
+      -webkit-backdrop-filter: blur(22px) saturate(140%);
+      border-color: rgba(17, 19, 34, 0.1);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 12px 28px rgba(17, 19, 34, 0.05);
     }
 
     html[data-theme="light"] .guide-details:hover {
-      border-color: rgba(20, 184, 166, 0.48);
+      border-color: rgba(17, 19, 34, 0.2);
     }
 
     html[data-theme="light"] .guide-summary {
-      color: #161036;
+      color: #111322;
     }
 
     html[data-theme="light"] .guide-chevron,
     html[data-theme="light"] .step-num {
-      color: #0D9488;
+      color: #606780;
+    }
+
+    html[data-theme="light"] .step-sep {
+      color: rgba(17, 19, 34, 0.28);
+    }
+
+    html[data-theme="light"] .step-title {
+      color: #111322;
+    }
+
+    html[data-theme="light"] .guide-step {
+      border-top-color: rgba(17, 19, 34, 0.08);
     }
 
     html[data-theme="light"] .guide-body {
-      border-top-color: rgba(99, 102, 241, 0.14);
+      border-top-color: rgba(17, 19, 34, 0.08);
     }
 
     html[data-theme="light"] .guide-clients,
     html[data-theme="light"] .step-text {
-      color: #413D64;
+      color: #454B63;
     }
 
     html[data-theme="light"] .guide-clients strong {
-      color: #161036;
+      color: #111322;
     }
 
     html[data-theme="light"] .fl-footer {
-      background-color: #DCE6F7;
-      color: #413D64;
-      border-top-color: rgba(99, 102, 241, 0.16);
+      background-color: #EEF2F8;
+      color: #545B73;
+      border-top-color: rgba(17, 19, 34, 0.08);
     }
 
     html[data-theme="light"] .fl-footer-brand {
-      color: #161036;
+      color: #111322;
     }
 
     html[data-theme="light"] .fl-footer-link {
-      color: #3730A3;
+      color: #2B314A;
     }
 
     html[data-theme="light"] .fl-footer-link:hover {
-      color: #161036;
+      color: #111322;
     }
 
     html[data-theme="light"] .qr-modal-backdrop {
-      background: rgba(22, 16, 54, 0.56);
+      background: rgba(17, 19, 34, 0.48);
     }
 
     html[data-theme="light"] .qr-modal {
-      background: linear-gradient(155deg, #F5F9FF 0%, #E7EFFA 100%);
-      color: #161036;
-      border-color: rgba(20, 184, 166, 0.34);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(238, 242, 248, 0.94) 100%);
+      color: #111322;
+      border-color: rgba(17, 19, 34, 0.12);
     }
 
     html[data-theme="light"] .qr-modal-title {
-      color: #161036;
+      color: #111322;
     }
 
     html[data-theme="light"] .toast {
-      background-color: #1C1540;
-      border-color: rgba(94, 234, 212, 0.38);
+      background: rgba(17, 19, 34, 0.88);
+      border-color: rgba(255, 255, 255, 0.16);
       color: #FFFFFF;
+    }
+
+    /* =========================================================================
+       ACCESS GATE (Full-Screen 100dvh Passphrase Screen + Zero-FOUC Reveal)
+       ========================================================================= */
+    html[data-access="locked"] {
+      background-color: #050114;
+      overflow: hidden;
+    }
+
+    html[data-access="locked"] body {
+      background-color: #050114;
+      overflow: hidden;
+    }
+
+    html[data-access="locked"] .fl-app-shell {
+      display: none;
+    }
+
+    html[data-access="unlocking"] .fl-app-shell {
+      display: block;
+      animation: appReveal 420ms var(--ease) both;
+    }
+
+    html[data-access="unlocked"] .fl-gate {
+      display: none;
+    }
+
+    @keyframes appReveal {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fl-gate {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      width: 100%;
+      min-height: 100vh;
+      min-height: 100dvh;
+      height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 18px;
+      background-color: #050114;
+      color: #FFFFFF;
+      overflow-y: auto;
+      opacity: 1;
+      transition: opacity 320ms var(--ease);
+    }
+
+    .fl-gate.is-leaving {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .fl-gate-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      overflow: hidden;
+      background:
+        radial-gradient(56% 52% at 50% 50%, rgba(110, 72, 196, 0.2) 0%, rgba(5, 1, 20, 0) 72%),
+        #050114;
+    }
+
+    .fl-gate-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 68% 66% at 50% 50%, rgba(5, 1, 20, 0.42) 0%, rgba(5, 1, 20, 0.72) 82%, rgba(5, 1, 20, 0.88) 100%);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .fl-gate-bg-fox {
+      width: min(760px, 130vw);
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      opacity: 0.9;
+      transform: scale(1.04);
+      user-select: none;
+      pointer-events: none;
+      -webkit-mask-image: radial-gradient(closest-side at 50% 50%, #000 68%, transparent 100%);
+      mask-image: radial-gradient(closest-side at 50% 50%, #000 68%, transparent 100%);
+    }
+
+    .fl-gate-card {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 416px;
+      padding: 36px 28px 30px;
+      border-radius: 32px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.03) 100%);
+      backdrop-filter: blur(28px) saturate(165%);
+      -webkit-backdrop-filter: blur(28px) saturate(165%);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24), 0 28px 68px rgba(0, 0, 0, 0.58);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+    }
+
+    .fl-gate-emblem {
+      width: 96px;
+      height: 96px;
+      border-radius: 26px;
+      overflow: hidden;
+      background: #050114;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 14px 32px rgba(0, 0, 0, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .fl-gate-emblem img,
+    .fl-gate-emblem svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .fl-gate-heading {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .fl-gate-brand {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 7vw, 2.9rem);
+      font-weight: 800;
+      line-height: 0.96;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+    }
+
+    .fl-gate-brand span {
+      background: linear-gradient(135deg, #F5A3FF 0%, #E879F9 45%, #67E8F9 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .fl-gate-subtitle {
+      font-size: 14.5px;
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.68);
+    }
+
+    .fl-gate-form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .fl-gate-field {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      text-align: left;
+    }
+
+    .fl-gate-input {
+      width: 100%;
+      min-height: 54px;
+      padding: 13px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(5, 1, 20, 0.52);
+      color: #FFFFFF;
+      font-family: var(--font-sans);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.3;
+      outline: none;
+      text-align: center;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      transition: border-color 160ms var(--ease), background-color 160ms var(--ease), box-shadow 160ms var(--ease);
+    }
+
+    .fl-gate-input::placeholder {
+      color: rgba(255, 255, 255, 0.44);
+      font-weight: 500;
+    }
+
+    .fl-gate-input:focus {
+      border-color: rgba(255, 255, 255, 0.44);
+      background: rgba(5, 1, 20, 0.68);
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.12);
+    }
+
+    .fl-gate-input.is-error {
+      border-color: rgba(251, 113, 133, 0.78);
+      box-shadow: 0 0 0 3px rgba(251, 113, 133, 0.18);
+    }
+
+    .fl-gate-input.is-shaking {
+      animation: gateShake 360ms cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    }
+
+    @keyframes gateShake {
+      0%, 100% { transform: translateX(0); }
+      18% { transform: translateX(-7px); }
+      36% { transform: translateX(6px); }
+      54% { transform: translateX(-5px); }
+      72% { transform: translateX(4px); }
+      88% { transform: translateX(-2px); }
+    }
+
+    .fl-gate-error {
+      min-height: 20px;
+      font-size: 13.5px;
+      font-weight: 600;
+      line-height: 1.35;
+      color: #FDA4AF;
+      text-align: center;
+    }
+
+    .fl-gate-submit {
+      width: 100%;
+      min-height: 54px;
+      padding: 14px 24px;
+      font-size: 16px;
+      font-weight: 700;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.1) 100%) !important;
+      border-color: rgba(255, 255, 255, 0.34) !important;
+      color: #FFFFFF !important;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), inset 0 -1px 0 rgba(255, 255, 255, 0.08), 0 12px 28px rgba(0, 0, 0, 0.36) !important;
+    }
+
+    .fl-gate-submit:hover {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.15) 100%) !important;
+      border-color: rgba(255, 255, 255, 0.5) !important;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 600px) {
+      .fl-gate-card {
+        padding: 30px 20px 24px;
+        border-radius: 26px;
+        gap: 18px;
+      }
+
+      .fl-gate-emblem {
+        width: 84px;
+        height: 84px;
+        border-radius: 22px;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1759,34 +2111,126 @@
     }
   </style>
   <script>
+    const ACCESS_CODE = "Фокс888";
+
     (function () {
+      const ACCESS_STORAGE_KEY = 'lucefox-access-token';
+
+      function normalizeAccessCode(value) {
+        return String(value == null ? '' : value).trim().toLowerCase();
+      }
+
+      function computeAccessToken(code) {
+        const normalized = 'lucefox:v1:' + normalizeAccessCode(code);
+        let hash = 0x811c9dc5;
+        for (let i = 0; i < normalized.length; i++) {
+          hash ^= normalized.charCodeAt(i);
+          hash = Math.imul(hash, 0x01000193);
+        }
+        return 'lf1_' + (hash >>> 0).toString(16).padStart(8, '0');
+      }
+
+      function isAccessCodeValid(input, expected) {
+        const normalizedInput = normalizeAccessCode(input);
+        const normalizedExpected = normalizeAccessCode(expected);
+        return normalizedExpected.length > 0 && normalizedInput === normalizedExpected;
+      }
+
+      window.__LUCEFOX_ACCESS__ = {
+        storageKey: ACCESS_STORAGE_KEY,
+        normalize: normalizeAccessCode,
+        computeToken: computeAccessToken,
+        isValid: isAccessCodeValid,
+        expectedToken: computeAccessToken(ACCESS_CODE),
+        checkInput: function (input) {
+          return isAccessCodeValid(input, ACCESS_CODE);
+        }
+      };
+
       try {
         var saved = localStorage.getItem('lucefox-theme');
         if (saved === 'light' || saved === 'dark') {
           document.documentElement.dataset.theme = saved;
           var meta = document.querySelector('meta[name="theme-color"]');
-          if (meta) meta.setAttribute('content', saved === 'light' ? '#E7EFFA' : '#210340');
+          if (meta) meta.setAttribute('content', saved === 'light' ? '#EEF2F8' : '#050114');
         } else {
           document.documentElement.dataset.theme = 'dark';
         }
       } catch (_) {
         document.documentElement.dataset.theme = 'dark';
       }
+
+      try {
+        var savedToken = localStorage.getItem(ACCESS_STORAGE_KEY);
+        if (savedToken && savedToken === window.__LUCEFOX_ACCESS__.expectedToken) {
+          document.documentElement.dataset.access = 'unlocked';
+        } else {
+          document.documentElement.dataset.access = 'locked';
+        }
+      } catch (_) {
+        document.documentElement.dataset.access = 'locked';
+      }
     })();
   </script>
 </head>
 <body>
-  <!-- Top Sync Pencil Banner (Firefox Flare style) -->
-  <div class="pencil-bar" aria-live="polite">
-    <div class="pencil-inner">
-      <span class="live-dot" aria-hidden="true"></span>
-      <span>Синхронизация: <span class="pencil-time" id="header-sync-time">— МСК</span></span>
-      <span class="pencil-sep" aria-hidden="true">·</span>
-      <span class="pencil-note">Автоматический выбор узла</span>
+  <!-- Full-Screen Access Gate -->
+  <section class="fl-gate" id="access-gate" aria-labelledby="access-gate-title">
+    <div class="fl-gate-bg" aria-hidden="true">
+      <img
+        class="fl-gate-bg-fox"
+        id="gate-fox-bg"
+        data-fox-artwork
+        src="./assets/fox.png"
+        alt=""
+        width="760"
+        height="760"
+        loading="eager"
+        decoding="async"
+      />
     </div>
-  </div>
+    <div class="fl-gate-card">
+      <div class="fl-gate-emblem" aria-hidden="true">
+        <img
+          id="gate-fox-avatar"
+          data-fox-artwork
+          src="./assets/fox.png"
+          alt=""
+          width="96"
+          height="96"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+      <div class="fl-gate-heading">
+        <h1 class="fl-gate-brand" id="access-gate-title">Luce<span>Fox</span></h1>
+        <p class="fl-gate-subtitle">Введите кодовое слово для доступа</p>
+      </div>
+      <form class="fl-gate-form" id="access-gate-form" novalidate>
+        <div class="fl-gate-field">
+          <input
+            type="text"
+            class="fl-gate-input"
+            id="access-code-input"
+            name="accessCode"
+            inputmode="text"
+            autocomplete="off"
+            autocapitalize="none"
+            autocorrect="off"
+            spellcheck="false"
+            placeholder="Кодовое слово"
+            aria-label="Кодовое слово"
+            aria-describedby="access-gate-error"
+          />
+          <p class="fl-gate-error" id="access-gate-error" role="alert" aria-live="polite"></p>
+        </div>
+        <button type="submit" class="fl-btn fl-btn-gold fl-gate-submit" id="access-gate-submit">Войти</button>
+      </form>
+    </div>
+  </section>
 
-  <!-- Sticky Firefox Flare Header -->
+  <div class="fl-app-shell" id="app-shell">
+  <!-- Sticky Glass Header -->
   <header class="fl-header">
     <div class="container fl-header-inner">
       <a href="./" class="fl-brand" aria-label="LuceFox">
@@ -1825,7 +2269,6 @@
           <svg class="fl-theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
           </svg>
-          <span class="fl-theme-label" id="theme-toggle-label">Светлая</span>
         </button>
         <a href="#profiles" class="fl-nav-cta">К профилям</a>
       </div>
@@ -1840,6 +2283,7 @@
           <img
             class="fl-fox-artwork"
             id="hero-fox-img"
+            data-fox-artwork
             src="./assets/fox.png"
             alt=""
             width="650"
@@ -1852,7 +2296,6 @@
           <div class="fl-hero-inner">
             <p class="fl-superheading">Luce<span>Fox</span></p>
             <h1 class="fl-hero-title">Ключи и настройки для мобильного и домашнего интернета</h1>
-            <p class="fl-hero-sub">Автоматический выбор узла и регулярная синхронизация профилей для Hiddify, Happ, v2rayNG и других клиентов.</p>
             <div class="fl-hero-actions">
               <a href="#profiles" class="fl-btn fl-btn-gold">
                 <span>Выбрать профиль</span>
@@ -1871,7 +2314,6 @@
       <section class="fl-hiddify-section" id="hiddify-settings" aria-labelledby="hiddify-settings-heading">
         <div class="container">
           <div class="fl-section-heading">
-            <h2 class="fl-h2" id="hiddify-settings-heading">Настройки для Hiddify</h2>
             <p class="fl-h2-sub">Импортируйте параметры клиента и правила маршрутизации перед добавлением профиля.</p>
           </div>
 
@@ -1950,36 +2392,54 @@
         <div class="container">
           <div class="fl-section-heading">
             <h2 class="fl-h2 fl-h2-dark" id="profiles-heading">Профили подключения</h2>
-            <p class="fl-h2-sub fl-h2-sub-dark">Выберите профиль для вашей сети — синхронизация выполняется автоматически.</p>
           </div>
 
           <div class="profiles-grid" id="profiles-grid"></div>
         </div>
       </section>
 
-      <section class="fl-guide-section" id="guide" aria-label="Инструкция по подключению">
+      <section class="fl-guide-section" id="guide" aria-label="Рекомендуем сделать">
         <div class="container">
           <details class="guide-details">
             <summary class="guide-summary">
-              <span>Как подключиться за 1 минуту</span>
+              <span>Рекомендуем сделать</span>
               <svg class="guide-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </summary>
             <div class="guide-body">
-              <p class="guide-clients">Подходящие приложения: <strong>Hiddify</strong>, <strong>Happ</strong> или <strong>v2rayNG</strong>.</p>
               <ol class="guide-steps">
                 <li class="guide-step">
-                  <span class="step-num">01</span>
-                  <p class="step-text">Скопируйте ссылку нужного профиля или отсканируйте QR-код и добавьте профиль в приложение.</p>
+                  <div class="step-head">
+                    <span class="step-num">01</span>
+                    <span class="step-sep" aria-hidden="true">·</span>
+                    <span class="step-title">Обязательно в первую очередь</span>
+                  </div>
+                  <p class="step-text">Включите разделение по приложениям: Настройки → Маршрутизация → По приложениям → Только прокси (и добавьте приложения, которые плохо работают) — так банки и обычные сервисы будут работать без сбоев.</p>
                 </li>
                 <li class="guide-step">
-                  <span class="step-num">02</span>
-                  <p class="step-text">Выберите режим автоматического выбора узла по минимальной задержке (Lowest ping).</p>
+                  <div class="step-head">
+                    <span class="step-num">02</span>
+                    <span class="step-sep" aria-hidden="true">·</span>
+                    <span class="step-title">Добавьте профиль</span>
+                  </div>
+                  <p class="step-text">Скопируйте ссылку нужного профиля, отсканируйте QR-код или нажмите кнопку быстрого добавления.</p>
                 </li>
                 <li class="guide-step">
-                  <span class="step-num">03</span>
-                  <p class="step-text">При желании включите разделение по приложениям в параметрах клиента.</p>
+                  <div class="step-head">
+                    <span class="step-num">03</span>
+                    <span class="step-sep" aria-hidden="true">·</span>
+                    <span class="step-title">Оставьте автовыбор</span>
+                  </div>
+                  <p class="step-text">Убедитесь, что выбран автоматический режим по минимальной задержке (Auto / Lowest ping) — при обрыве сервер переключится сам.</p>
+                </li>
+                <li class="guide-step">
+                  <div class="step-head">
+                    <span class="step-num">04</span>
+                    <span class="step-sep" aria-hidden="true">·</span>
+                    <span class="step-title">Если видео грузится медленно</span>
+                  </div>
+                  <p class="step-text">Откройте список серверов и запустите тест скорости (1 МБ) по всем серверам.</p>
                 </li>
               </ol>
             </div>
@@ -1995,6 +2455,15 @@
       <span id="footer-meta">Автоматическая синхронизация профилей</span>
     </div>
   </footer>
+
+  <!-- Bottom Optimization Status Bar -->
+  <div class="pencil-bar" aria-live="polite">
+    <div class="pencil-inner">
+      <span class="live-dot" aria-hidden="true"></span>
+      <span>Последняя оптимизация: <span class="pencil-time" id="header-sync-time">— МСК</span></span>
+    </div>
+  </div>
+  </div><!-- /.fl-app-shell -->
 
   <!-- QR Zoom Modal -->
   <div class="qr-modal-backdrop" id="qr-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="qr-modal-title" hidden>
@@ -2182,7 +2651,7 @@
           {
             id: "wl",
             title: "🦊LuceFox ⚪ Mobile",
-            subtitle: "Мобильная сеть (White List)",
+            subtitle: "Мобильная сеть",
             accent: "cyan",
             update_interval_hours: 1,
             count: 165,
@@ -2191,15 +2660,15 @@
             raw_url: "https://raw.githubusercontent.com/Licastra/todolist/main/feed_w.txt#LuceFox-WL",
             cdn_url: "https://cdn.jsdelivr.net/gh/Licastra/todolist@main/feed_w.txt#LuceFox-WL",
             deeplinks: {
-              hiddify: "hiddify://import/https://raw.githubusercontent.com/Licastra/todolist/main/feed_w.txt#LuceFox-WL",
-              happ: "happ://add/https%3A%2F%2Fraw.githubusercontent.com%2FLicastra%2Ftodolist%2Fmain%2Ffeed_w.txt%23LuceFox-WL",
-              v2rayng: "v2rayng://install-sub?url=https%3A%2F%2Fraw.githubusercontent.com%2FLicastra%2Ftodolist%2Fmain%2Ffeed_w.txt%23LuceFox-WL&name=LuceFox-WL"
+              hiddify: "hiddify://import/https://raw.githubusercontent.com/Licastra/todolist/main/feed_w.txt",
+              happ: "happ://add/https://raw.githubusercontent.com/Licastra/todolist/main/feed_w.txt",
+              v2rayng: "v2rayng://install-sub?url=https%3A%2F%2Fraw.githubusercontent.com%2FLicastra%2Ftodolist%2Fmain%2Ffeed_w.txt&name=%F0%9F%A6%8ALuceFox%20%E2%9A%AA%20Mobile"
             }
           },
           {
             id: "bl",
             title: "🦊LuceFox ⚫ Wi-Fi",
-            subtitle: "Wi-Fi и провод (Black List)",
+            subtitle: "Wi-Fi и проводной",
             accent: "amber",
             update_interval_hours: 2,
             count: 0,
@@ -2208,9 +2677,9 @@
             raw_url: "https://raw.githubusercontent.com/Licastra/todolist/main/feed_b.txt#LuceFox-BL",
             cdn_url: "https://cdn.jsdelivr.net/gh/Licastra/todolist@main/feed_b.txt#LuceFox-BL",
             deeplinks: {
-              hiddify: "hiddify://import/https://raw.githubusercontent.com/Licastra/todolist/main/feed_b.txt#LuceFox-BL",
-              happ: "happ://add/https%3A%2F%2Fraw.githubusercontent.com%2FLicastra%2Ftodolist%2Fmain%2Ffeed_b.txt%23LuceFox-BL",
-              v2rayng: "v2rayng://install-sub?url=https%3A%2F%2Fraw.githubusercontent.com%2FLicastra%2Ftodolist%2Fmain%2Ffeed_b.txt%23LuceFox-BL&name=LuceFox-BL"
+              hiddify: "hiddify://import/https://raw.githubusercontent.com/Licastra/todolist/main/feed_b.txt",
+              happ: "happ://add/https://raw.githubusercontent.com/Licastra/todolist/main/feed_b.txt",
+              v2rayng: "v2rayng://install-sub?url=https%3A%2F%2Fraw.githubusercontent.com%2FLicastra%2Ftodolist%2Fmain%2Ffeed_b.txt&name=%F0%9F%A6%8ALuceFox%20%E2%9A%AB%20Wi-Fi"
             }
           }
         ]
@@ -2266,21 +2735,20 @@
           if (img.complete && img.naturalWidth === 0) swapToSvg();
         });
 
-        const heroImg = document.getElementById('hero-fox-img');
-        if (heroImg) {
-          const applyHeroFallback = function () {
-            if (HERO_FOX_FALLBACK_DATA_URI.indexOf('data:image/') === 0 && heroImg.src !== HERO_FOX_FALLBACK_DATA_URI) {
-              heroImg.src = HERO_FOX_FALLBACK_DATA_URI;
+        document.querySelectorAll('img[data-fox-artwork]').forEach(function (foxImg) {
+          const applyFoxFallback = function () {
+            if (HERO_FOX_FALLBACK_DATA_URI.indexOf('data:image/') === 0 && foxImg.src !== HERO_FOX_FALLBACK_DATA_URI) {
+              foxImg.src = HERO_FOX_FALLBACK_DATA_URI;
             } else {
               const holder = document.createElement('div');
-              holder.className = 'fl-fox-artwork';
+              holder.className = foxImg.className;
               holder.innerHTML = FOX_SVG_FALLBACK;
-              heroImg.replaceWith(holder);
+              foxImg.replaceWith(holder);
             }
           };
-          heroImg.addEventListener('error', applyHeroFallback);
-          if (heroImg.complete && heroImg.naturalWidth === 0) applyHeroFallback();
-        }
+          foxImg.addEventListener('error', applyFoxFallback);
+          if (foxImg.complete && foxImg.naturalWidth === 0) applyFoxFallback();
+        });
       }
 
       function pluralizeNodes(n) {
@@ -2623,7 +3091,7 @@
               }
             }
           }
-          return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + viewSize + ' ' + viewSize + '" shape-rendering="crispEdges" role="img" aria-label="QR-код"><rect width="100%" height="100%" fill="#ffffff"/><path d="' + d + '" fill="#210340"/></svg>';
+          return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + viewSize + ' ' + viewSize + '" shape-rendering="crispEdges" role="img" aria-label="QR-код"><rect width="100%" height="100%" fill="#ffffff"/><path d="' + d + '" fill="#050114"/></svg>';
         }
 
         return { encode: encode, toSvg: toSvg };
@@ -2637,7 +3105,7 @@
               text: url,
               width: sizePx,
               height: sizePx,
-              colorDark: '#210340',
+              colorDark: '#050114',
               colorLight: '#ffffff',
               correctLevel: window.QRCode.CorrectLevel ? window.QRCode.CorrectLevel.M : 0
             });
@@ -2864,7 +3332,6 @@
 
             const qrHint = document.createElement('span');
             qrHint.className = 'qr-hint';
-            qrHint.textContent = 'Нажмите для увеличения';
 
             qrCol.appendChild(qrBtn);
             qrCol.appendChild(qrHint);
@@ -2992,7 +3459,7 @@
 
         const metaTheme = document.querySelector('meta[name="theme-color"]');
         if (metaTheme) {
-          metaTheme.setAttribute('content', next === 'light' ? '#E7EFFA' : '#210340');
+          metaTheme.setAttribute('content', next === 'light' ? '#EEF2F8' : '#050114');
         }
 
         const btn = document.getElementById('theme-toggle');
@@ -3005,7 +3472,7 @@
             isLight ? 'Переключить на тёмную тему' : 'Переключить на светлую тему'
           );
           if (label) {
-            label.textContent = isLight ? 'Тёмная' : 'Светлая';
+            label.textContent = isLight ?'':'';
           }
         }
 
@@ -3040,7 +3507,64 @@
         }
       }
 
+      function setupAccessGate() {
+        const access = window.__LUCEFOX_ACCESS__;
+        const gate = document.getElementById('access-gate');
+        const form = document.getElementById('access-gate-form');
+        const input = document.getElementById('access-code-input');
+        const errorEl = document.getElementById('access-gate-error');
+        if (!access || !gate || !form || !input) return;
+
+        function clearError() {
+          input.classList.remove('is-error', 'is-shaking');
+          if (errorEl) errorEl.textContent = '';
+        }
+
+        function triggerError() {
+          if (errorEl) errorEl.textContent = 'Неверный код';
+          input.classList.add('is-error');
+          input.classList.remove('is-shaking');
+          void input.offsetWidth;
+          input.classList.add('is-shaking');
+          input.focus();
+        }
+
+        function unlockApp() {
+          clearError();
+          try {
+            localStorage.setItem(access.storageKey, access.expectedToken);
+          } catch (_) {
+            // Storage may be blocked in restricted private WebViews
+          }
+
+          const reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          if (reducedMotion) {
+            document.documentElement.dataset.access = 'unlocked';
+            return;
+          }
+
+          document.documentElement.dataset.access = 'unlocking';
+          gate.classList.add('is-leaving');
+          setTimeout(function () {
+            document.documentElement.dataset.access = 'unlocked';
+            gate.classList.remove('is-leaving');
+          }, 340);
+        }
+
+        input.addEventListener('input', clearError);
+
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          if (access.checkInput(input.value)) {
+            unlockApp();
+          } else {
+            triggerError();
+          }
+        });
+      }
+
       async function init() {
+        setupAccessGate();
         setupThemeToggle();
         setupMediaFallbacks();
         setupHiddifySection();
